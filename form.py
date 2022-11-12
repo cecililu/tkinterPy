@@ -26,13 +26,14 @@ root=Tk()
     
 
 #checkbox
+label1=Label(root ,text="What are your favoirite food",justify=LEFT).grid(row=0,sticky=W)
 var1=IntVar()
 var2=IntVar()
 var3=IntVar()
 var4=IntVar()
-Checkbutton(root,text='momo' ,variable=var1).grid(row=0,sticky=W)
-Checkbutton(root,text='pxxa' ,variable=var2).grid(row=1,sticky=W)
-Checkbutton(root,text='dal' ,variable=var3).grid(row=2,sticky=W)
-Checkbutton(root,text='bhat' ,variable=var4).grid(row=3,sticky=E)
+Checkbutton(root,text='momo' ,variable=var1).grid(row=1,sticky=W)
+Checkbutton(root,text='pxxa' ,variable=var2).grid(row=2,sticky=W)
+Checkbutton(root,text='dal' ,variable=var3).grid(row=1,sticky=E)
+Checkbutton(root,text='bhat' ,variable=var4).grid(row=2,sticky=E)
 
 root.mainloop()
