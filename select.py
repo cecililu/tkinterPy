@@ -8,7 +8,7 @@ root = Tk()
 root.geometry( "500x500" )
   
 options = [
-    "Select",
+    "Select Province",
     "Province 1",
     "Province 2",
     
@@ -23,19 +23,19 @@ province2=["Select District",
             ]
 district1_province1=[
            "Select Municipality",
-           'municipalty1',
-           'municpality2'  
+           'municipalty1_district1_province1',
+           'municpality2_district1_province1'  
             ]
 district2_province1=[
            "Select Municipality",
-           'municipalty1',
-           'municpality2'  
+           'municipalty1_district1_province1',
+           'municpality2_district2_province1'  
             ]
 
 district1_province2=[
               "Select Municipality",
-           'municipalty1',
-           'municpality2'  
+           'municipalty1_district1_province2',
+           'municpality2_district1_province2'  
             ]
 district2_province2=[
     "Select Municipality",
@@ -56,8 +56,8 @@ def makedistrictDD(province):
          drop= OptionMenu( root ,value_district,*province2,command=makedistrictMuni)
          drop.pack()
 
-def mkLabel():
-    adddress=value_province+ "   "+value_district + "   "+value_muni  
+def mkLabel(a):
+    adddress=value_province.get()+ "   "+value_district.get() + "   "+value_muni.get()  
     Label(root,text=adddress).pack()
     
 def makedistrictMuni(district):
